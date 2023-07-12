@@ -1,0 +1,52 @@
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html
+
+Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances.
+
+EBS volumes behave like raw, unformatted block devices. 
+
+You can mount these volumes as devices on your instances.
+
+EBS volumes that are attached to an instance are exposed as storage volumes that persist independently from the life of the instance.
+
+
+Scenarios :
+
+1)How to Attach EBS Volumes While Launching EC2 Instance
+
+2)How to Attach EBS Volume To Running EC2 Instance
+
+3)How to Copy Volumes From One Region to Another Region
+
+Note : EBS Volumes are AZ specific.
+
+To check whether the volume is formated or not
+
+1.sudo file -s  /dev/xvdb
+
+To Format the Volumes
+
+2.sudo mkfs -t ext4    /dev/xvdb
+
+Now mount the device with folder
+
+3.sudo mount   /dev/xvdb   /root/ebs-demo1/
+
+  sudo umount /root/ebs-demo1/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
